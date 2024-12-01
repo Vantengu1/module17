@@ -19,7 +19,7 @@ const TaskList = () => {
                 >
                     {tasks.text}
                     <button
-                    onClick={() => handlToggleTask(id)}
+                    onClick={() => handlToggleTask()}
                     >
                         {task.completed ? 'completed' : 'no-completed'}
                     </button>
