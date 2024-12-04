@@ -11,7 +11,7 @@ const AddTaskForm = () => {
         e.preventDefault();
         if (taskText.trim()) {
             const newTask = {
-                id: tasks.lenght + 1,
+                id: tasks.length + 1,
                 text: taskText,
                 completed: false,
             }
@@ -21,14 +21,15 @@ const AddTaskForm = () => {
     }
 
     return (
-        <form action="" onSubmit={handleTaskForm}>
+        <form className="add-task-form" action="" onSubmit={handleTaskForm}>
             <input 
                 className="task-input" 
                 type="text" 
+                value={taskText}
                 onChange={(e) => setTaskText(e.target.value)}
             />
             <button 
-                type="submmit" 
+                type="submit" 
                 className="add-task-button"
             >
                 Add task
